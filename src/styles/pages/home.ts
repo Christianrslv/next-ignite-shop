@@ -16,6 +16,7 @@ export const Product = styled('a', {
   alignItems: 'center',
   overflow: 'hidden',
   backgroundColor: '$gray800',
+  color: '$gray300',
 
   img: {
     objectFit: 'cover',
