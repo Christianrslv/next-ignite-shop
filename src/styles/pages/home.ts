@@ -2,25 +2,24 @@ import { styled } from '..';
 export const HomeContainer = styled('main', {
   display: 'flex',
   width: '100%',
-  height: '1rem',
   maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
   marginLeft: 'auto',
-  minHeight: 488,
+  minHeight: 500,
 })
 
 export const Product = styled('a', {
   borderRadius: 8,
   cursor: 'pointer',
   position: 'relative',
-
-  alignItems: 'center',
+  display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   overflow: 'hidden',
+  backgroundColor: '$gray800',
 
   img: {
     objectFit: 'cover',
     borderRadius: 8,
-    height: '100%',
   },
 
   footer: {
@@ -28,7 +27,7 @@ export const Product = styled('a', {
     bottom: '0.25rem',
     left: '0.25rem',
     right: '0.25rem',
-    padding: '2rem',
+    padding: '1.5rem',
 
     borderRadius: 6,
 

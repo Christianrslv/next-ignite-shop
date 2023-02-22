@@ -20,28 +20,28 @@ export default function Home() {
   return (
     <HomeContainer ref={sliderRef} className='keen-slider'>
       <Product className="keen-slider__slide">
-        <Image src={img3} /*width={520}*/ height={480} alt="" />
+        <Image src={img3} /*width={520}*/ height={420} alt="" />
         <footer>
           <strong>Shirt X</strong>
           <span>U$ 79.90</span>
         </footer>
       </Product>
       <Product className="keen-slider__slide">
-        <Image src={img2} /*width={520}*/ height={480} alt="" />
+        <Image src={img2} /*width={520}*/ height={420} alt="" />
         <footer>
           <strong>Shirt Y</strong>
           <span>U$ 29.90</span>
         </footer>
       </Product>
       <Product className="keen-slider__slide">
-        <Image src={img1} /*width={520}*/ height={480} alt="" />
+        <Image src={img1} /*width={520}*/ height={420} alt="" />
         <footer>
           <strong>Shirt Z</strong>
           <span>U$ 19.90</span>
         </footer>
       </Product>
       <Product className="keen-slider__slide">
-        <Image src={img3} /*width={520}*/ height={480} alt="" />
+        <Image src={img3} /*width={520}*/ height={420} alt="" />
         <footer>
           <strong>Shirt Z</strong>
           <span>U$ 19.90</span>
