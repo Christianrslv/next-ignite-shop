@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { HomeContainer, Product } from "../styles/pages/home"
+import Head from 'next/head'
 import { useKeenSlider } from 'keen-slider/react'
 import Image from "next/image"
 
@@ -26,19 +27,24 @@ export default function Home({ products }: HomeProps) {
   })
 
   return (
-    <HomeContainer ref={sliderRef} className='keen-slider'>
-      {products.map(product => {
-        return (
-          <Product href={`/product/${product.id}`} key={product.id} className="keen-slider__slide" >
-            <Image src={product.imageUrl} width={300} height={420} alt="" />
-            <footer>
-              <strong>{product.name}</strong>
-              <span>{product.price}</span>
-            </footer>
-          </Product>
-        )
-      })}
-    </HomeContainer >
+    <>
+      <Head>
+        <title>Home | MyShop</title>
+      </Head>
+      <HomeContainer ref={sliderRef} className='keen-slider'>
+        {products.map(product => {
+          return (
+            <Product href={`/product/${product.id}`} key={product.id} className="keen-slider__slide" >
+              <Image src={product.imageUrl} width={300} height={420} alt="" />
+              <footer>
+                <strong>{product.name}</strong>
+                <span>{product.price}</span>
+              </footer>
+            </Product>
+          )
+        })}
+      </HomeContainer>
+    </>
   )
 }
 
@@ -49,7 +55,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const products = response.data.map(product => {
     const price = product.default_price as Stripe.Price
-
     return {
       id: product.id,
       name: product.name,
